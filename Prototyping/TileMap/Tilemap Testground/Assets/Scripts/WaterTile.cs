@@ -52,6 +52,7 @@ public class WaterTile : Tile
 			}
 		}
 
+		//Random funktion for waterTiles, Roses, Waves etc
 		int randomVal = Random.Range(0, 100);
 
 		if (randomVal < 15)
@@ -60,7 +61,6 @@ public class WaterTile : Tile
 		}
 		else if (randomVal >= 15 && randomVal < 35)
 		{
-
 			tileData.sprite = waterSprites[48];
 		}
 		else
@@ -68,7 +68,7 @@ public class WaterTile : Tile
 			tileData.sprite = waterSprites[47];
 		}
 
-
+		//Checking all neighbours and paint like it should 
 		if (composition[1] == 'E' && composition[3] == 'E' && composition[4] == 'E' && composition[6] == 'E')
 		{
 			tileData.sprite = waterSprites[0];
@@ -253,13 +253,6 @@ public class WaterTile : Tile
 		{
 			tileData.sprite = waterSprites[45];
 		}
-
-
-	}
-
-	private void RandomWaterTiles(ITilemap tilemap, TileData tileData)
-	{
-
 	}
 
 	private bool HasWater(ITilemap tilemap, Vector3Int position)
@@ -273,10 +266,10 @@ public class WaterTile : Tile
 	public static void CreateWaterTile()
 	{
 		string path = EditorUtility.SaveFilePanelInProject ("Save Watertile", "New Watertile", "asset", "Save watertile", "Assets");
-		if (path == "") {
+		if (path == "") 
+		{
 			return;
 		}
-
 		AssetDatabase.CreateAsset (ScriptableObject.CreateInstance<WaterTile> (), path);
 	}
 	#endif

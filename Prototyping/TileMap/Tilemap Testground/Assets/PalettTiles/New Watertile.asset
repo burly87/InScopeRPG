@@ -84,3 +84,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 695ebc64fe006dc4ea001d2fe822b67d, type: 3}
   - {fileID: 21300000, guid: 99f1dc2844a828c409c0f6deaa47dd31, type: 3}
   preview: {fileID: 21300000, guid: 695ebc64fe006dc4ea001d2fe822b67d, type: 3}
+  randomVal: 59
